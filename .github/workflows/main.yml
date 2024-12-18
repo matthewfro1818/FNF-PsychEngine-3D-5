@@ -20,7 +20,7 @@ permissions:
 
 env:
   PROJECT_NAME: PsychEngine
-  REPO_PATH: https://github.com/matthewfro1818/FNF-PsychEngine-3D-
+  REPO_PATH: https://github.com/matthewfro1818/FNF-PsychEngine-3D-5
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
