@@ -34,7 +34,6 @@ class Paths
 
 	static public function getBitmapPNG(key:String, ?folder:String)
 	{
-		tmpPNGBytes = BitmapData.fromFile(Paths.image(key));
 		var texture = FlxG.stage.context3D.createTexture(tmpPNGBytes.width, tmpPNGBytes.height, Context3DTextureFormat.BGRA, false);
 		texture.uploadFromBitmapData(tmpPNGBytes);
 		tmpPNGBytes.dispose();
