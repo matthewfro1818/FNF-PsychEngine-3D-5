@@ -18,7 +18,7 @@ import flash.media.Sound;
 
 import haxe.Json;
 
-import openfl.display3D.Context3DTextureFormat
+import openfl.display3D.Context3DTextureFormat;
 
 #if MODS_ALLOWED
 import backend.Mods;
