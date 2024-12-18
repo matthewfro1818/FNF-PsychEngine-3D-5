@@ -18,6 +18,7 @@ import flash.media.Sound;
 
 import haxe.Json;
 
+import openfl.display3D.Context3DTextureFormat
 
 #if MODS_ALLOWED
 import backend.Mods;
@@ -71,6 +72,18 @@ class Paths
 	public static function excludeAsset(key:String) {
 		if (!dumpExclusions.contains(key))
 			dumpExclusions.push(key);
+	}
+
+	inline static public function file(key:String, location:String, extension:String):String
+	{
+		var data:String = 'assets/$location/$key.$extension';
+		/*#if override
+			if(FileSystem.exists('override/$location/$key.$extension')){
+				data = 'override/$location/$key.$extension';
+				//trace("OVERRIDE FOR " + key + " FOUND!");
+			}
+			#end */
+		return data;
 	}
 
 	public static var dumpExclusions:Array<String> = ['assets/shared/music/freakyMenu.$SOUND_EXT'];
