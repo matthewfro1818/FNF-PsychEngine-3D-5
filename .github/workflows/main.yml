@@ -87,7 +87,7 @@ jobs:
           name: windowsBuild
           path: export/release/windows/bin
   buildMac:
-    runs-on: macos-15
+    runs-on: macos-latest
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -115,8 +115,8 @@ jobs:
           name: macBuild
           path: export/release/macos/bin
   buildIos:
-    runs-on: macos-15
-
+    runs-on: macos-latest
+    
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.7
