@@ -46,7 +46,7 @@ class Paths
 	{
 		if (!Cashew.exists(key))
 		{
-			var tex = getBitmapPNG(key, folder);
+			var tex = getBitmapPNG(key);
 			var gfx = FlxGraphic.fromBitmapData(BitmapData.fromTexture(tex), false, key, folder, false);
 			gfx.destroyOnNoUse = false;
 			Cashew.cache(key, gfx, tex);
