@@ -34,23 +34,10 @@ class Paths
 
 	static public function getBitmapPNG(key:String, ?folder:String)
 	{
-		var texture = FlxG.stage.context3D.createTexture(tmpPNGBytes.width, tmpPNGBytes.height, Context3DTextureFormat.BGRA, false);
-		texture.uploadFromBitmapData(tmpPNGBytes);
-		tmpPNGBytes.dispose();
-		tmpPNGBytes = null;
-		return texture;
 	}
 
 	static public function getImagePNG(key:String, ?folder:String)
 	{
-		if (!Cashew.exists(key))
-		{
-			var tex = getBitmapPNG(key);
-			var gfx = FlxGraphic.fromBitmapData(BitmapData.fromTexture(tex), false, key, false);
-			gfx.destroyOnNoUse = false;
-			Cashew.cache(key, gfx, tex);
-		}
-		return Cashew.get(key);
 	}
 
 	static public function getSparrowAtlasPNG(key:String, ?folder:String)
